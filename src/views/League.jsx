@@ -38,16 +38,13 @@ export default function League() {
 
     if (facts.mand === "Yes" && facts.programmering === "Yes" && facts.react === "Yes") {
       diagnosis = 'Personen er Morten';
-      conclusion += 'UCL og Premier League';
-    } else if (facts.ucl === "Yes" && facts.premier === "No" && facts.tysk === "Yes") {
-      diagnosis = 'Dit hold kan være Bayern München';
-      conclusion += 'UCL, ikke Premier League, og tysk';
-    } else if (facts.ucl === "Yes" && facts.tysk === "No") {
-      diagnosis = 'Dit hold kan være Real Madrid';
+      conclusion += 'Det er en Mand, han underviser i programmering sproget react.';
+    } else if (facts.mand === "Yes" && facts.programmer === "No") {
+      diagnosis = 'Din person er Sergio';
+      conclusion += 'Det er en mand der ikke underviser i programmering';
+    } else if (facts.Mand === "Yes" && facts.programmering === "yes" && facts.react === "No" ) {
+      diagnosis = 'Din person er Per';
       conclusion += 'UCL, ikke Premier League, og ikke tysk';
-    } else if (facts.premier === "Yes") {
-      diagnosis = 'Dit hold kan være Leicester';
-      conclusion += 'Premier League';
     } else {
       diagnosis = 'Dit holds tilstand kan ikke bestemmes baseret på de nuværende oplysninger.';
       conclusion += 'ingen UCL, Premier League, eller tysk.';
@@ -57,7 +54,7 @@ export default function League() {
       <div>
         <p>{diagnosis}</p>
         <p>{conclusion}</p>
-        <button onClick={() => setFacts({ ucl: null, premier: null, tysk: null })}>
+        <button onClick={() => setFacts({ programmering: null, mand: null, react: null })}>
           Start forfra
         </button>
       </div>
