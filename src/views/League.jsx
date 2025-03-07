@@ -42,7 +42,7 @@ export default function League() {
     } else if (facts.mand === "Yes" && facts.programmering === "No") {
       diagnosis = 'Din person er Sergio';
       conclusion += 'Det er en mand der ikke underviser i programmering';
-    } else if (facts.mand === "Yes" && facts.programmering === "yes" && facts.react === "No" ) {
+    } else if (facts.mand === "Yes" && facts.programmering === "Yes" && facts.react === "No" ) {
       diagnosis = 'Din person er Per';
       conclusion += 'UCL, ikke Premier League, og ikke tysk';
     } else {
