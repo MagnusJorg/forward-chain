@@ -5,7 +5,7 @@ export default function Header() {
         <header>
             <nav style={{display: "flex", gap: "40px", justifyContent: "center"}}>
                 <p>
-                    <Link to="">Home</Link>
+                    <Link to="">Forside</Link>
                 </p>
                 <p>
                     <Link to="four">Jeg kan gætte din lærer</Link>

@@ -1,6 +1,8 @@
 export default function Home() {
     return (
-        <h2>Try out the different AI tools in the menu</h2>
+        <><h2>Akinator: Gæt en lærer-edition</h2>
+        <p>Spillet går ud på at vælge en lærer</p>
+        <h3>Her er udvalget af lærere</h3></>
     )
 
 }
