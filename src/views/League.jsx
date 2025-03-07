@@ -39,7 +39,7 @@ export default function League() {
     if (facts.mand === "Yes" && facts.programmering === "Yes" && facts.react === "Yes") {
       diagnosis = 'Personen er Morten';
       conclusion += 'Det er en Mand, han underviser i programmering sproget react.';
-    } else if (facts.mand === "Yes" && facts.programmer === "No") {
+    } else if (facts.mand === "Yes" && facts.programmering === "No") {
       diagnosis = 'Din person er Sergio';
       conclusion += 'Det er en mand der ikke underviser i programmering';
     } else if (facts.Mand === "Yes" && facts.programmering === "yes" && facts.react === "No" ) {
