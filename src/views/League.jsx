@@ -3,9 +3,9 @@ import { useState } from 'react';
 export default function League() {
   // Knowledge base
   const [facts, setFacts] = useState({
-    ucl: null,
-    premier: null,
-    tysk: null,
+    mand: null,
+    programmering: null,
+    react: null,
   });
 
   // User Interface (UI)
@@ -13,8 +13,8 @@ export default function League() {
     return (
       <div key={fact}>
         <p>Er personen{fact.replace('_', ' ')}?</p>
-        <button onClick={() => setFacts({ ...facts, [fact]: "Yes" })}>Ja</button>
-        <button onClick={() => setFacts({ ...facts, [fact]: "No" })}>Nej</button>
+        <button onClick={() => setFacts({ ...facts, [fact]: "Yes" })}>Yes</button>
+        <button onClick={() => setFacts({ ...facts, [fact]: "No" })}>No</button>
       </div>
     );
   };
@@ -42,7 +42,7 @@ export default function League() {
     } else if (facts.mand === "Yes" && facts.programmering === "No") {
       diagnosis = 'Din person er Sergio';
       conclusion += 'Det er en mand der ikke underviser i programmering';
-    } else if (facts.Mand === "Yes" && facts.programmering === "yes" && facts.react === "No" ) {
+    } else if (facts.mand === "Yes" && facts.programmering === "yes" && facts.react === "No" ) {
       diagnosis = 'Din person er Per';
       conclusion += 'UCL, ikke Premier League, og ikke tysk';
     } else {
