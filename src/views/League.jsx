@@ -46,8 +46,8 @@ export default function League() {
       diagnosis = 'Din person er Per';
       conclusion += 'UCL, ikke Premier League, og ikke tysk';
     } else {
-      diagnosis = 'Dit holds tilstand kan ikke bestemmes baseret på de nuværende oplysninger.';
-      conclusion += 'ingen UCL, Premier League, eller tysk.';
+      diagnosis = 'Du skal vælge andet end nej du snyder.';
+      conclusion += 'Taber';
     }
 
     return (
