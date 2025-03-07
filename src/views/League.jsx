@@ -12,32 +12,32 @@ export default function League() {
   const askQuestion = (fact) => {
     return (
       <div key={fact}>
-        <p>Har dit hold en {fact.replace('_', ' ')}?</p>
-        <button onClick={() => setFacts({ ...facts, [fact]: "Yes" })}>Yes</button>
-        <button onClick={() => setFacts({ ...facts, [fact]: "No" })}>No</button>
+        <p>Er personen{fact.replace('_', ' ')}?</p>
+        <button onClick={() => setFacts({ ...facts, [fact]: "Yes" })}>Ja</button>
+        <button onClick={() => setFacts({ ...facts, [fact]: "No" })}>Nej</button>
       </div>
     );
   };
 
   // Inference engine
   const forwardChain = () => {
-    if (facts.ucl === null) {
-      return askQuestion('ucl');
+    if (facts.mand === null) {
+      return askQuestion(' en mand');
     }
 
-    if (facts.premier === null) {
-      return askQuestion('premier');
+    if (facts.programmering === null) {
+      return askQuestion(' underviser i programmering');
     }
 
-    if (facts.tysk === null) {
-      return askQuestion('tysk');
+    if (facts.react === null) {
+      return askQuestion(' underviser i react');
     }
 
     let diagnosis = '';
     let conclusion = 'Based on the facts: ';
 
-    if (facts.ucl === "Yes" && facts.premier === "Yes") {
-      diagnosis = 'Dit hold kan være Manchester City';
+    if (facts.mand === "Yes" && facts.programmering === "Yes" && facts.react === "Yes") {
+      diagnosis = 'Personen er Morten';
       conclusion += 'UCL og Premier League';
     } else if (facts.ucl === "Yes" && facts.premier === "No" && facts.tysk === "Yes") {
       diagnosis = 'Dit hold kan være Bayern München';
