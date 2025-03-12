@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 export default function League() {
-  // Knowledge base - initialize with the correct properties
   const [facts, setFacts] = useState({
     mand: null,
     programmering: null,
@@ -9,9 +8,8 @@ export default function League() {
     ux: null,
   });
 
-  // User Interface (UI)
+ 
   const askQuestion = (fact) => {
-    // Format the question based on the fact
     let question = '';
     if (fact === 'mand') {
       question = ' en mand';
@@ -26,13 +24,12 @@ export default function League() {
     return (
       <div key={fact}>
         <p>Er personen{question}?</p>
-        <button onClick={() => setFacts({ ...facts, [fact]: "Yes" })}>Ja</button>
-        <button onClick={() => setFacts({ ...facts, [fact]: "No" })}>Nej</button>
+        <button style={{ padding: "20px 50px 20px 50px", backgroundColor: "#007bff", color: "white", border: "none", borderRadius: "10px", cursor: "pointer" }} onClick={() => setFacts({ ...facts, [fact]: "Yes" })}>Ja</button>
+        <button style={{ padding: "20px 50px 20px 50px", backgroundColor: "#007bff", color: "white", border: "none", borderRadius: "10px", cursor: "pointer" }} onClick={() => setFacts({ ...facts, [fact]: "No" })}>Nej</button>
       </div>
     );
   };
 
-  // Inference engine
   const forwardChain = () => {
     if (facts.mand === null) {
       return askQuestion('mand');
